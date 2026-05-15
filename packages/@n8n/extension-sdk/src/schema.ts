@@ -3,8 +3,9 @@ import { z } from 'zod';
 /**
  * Schema for the extension configuration.
  */
-export const extensionManifestSchema: z.ZodTypeAny = z.object({
-	 /** Name of the extension package.
+export const extensionManifestSchema = z.object({
+	/**
+	 * Name of the extension package.
 	 */
 	name: z.string(),
 
@@ -41,6 +42,7 @@ export const extensionManifestSchema: z.ZodTypeAny = z.object({
 		 * Path to the backend entry file.
 		 */
 		backend: z.string(),
+
 		/**
 		 * Path to the frontend entry file.
 		 */
@@ -56,13 +58,7 @@ export const extensionManifestSchema: z.ZodTypeAny = z.object({
 	 * Permissions object specifying allowed access for frontend and backend.
 	 */
 	permissions: z.object({
-		/**
-		 * List of frontend permissions (array of strings).
-		 */
 		frontend: z.array(z.string()),
-		/**
-		 * List of backend permissions (array of strings).
-		 */
 		backend: z.array(z.string()),
 	}),
 
@@ -75,21 +71,15 @@ export const extensionManifestSchema: z.ZodTypeAny = z.object({
 	 * Define extension points for existing functionalities.
 	 */
 	extends: z.object({
-		/**
-		 * Extends the views configuration.
-		 */
 		views: z.object({
-			/**
-			 * Extends the workflows view configuration.
-			 */
 			workflows: z.object({
-				/**
-				 * Header component for the workflows view.
-				 */
 				header: z.string(),
 			}),
 		}),
 	}),
 });
 
+/**
+ * TypeScript type inferred from the schema
+ */
 export type ExtensionManifest = z.infer<typeof extensionManifestSchema>;
