@@ -3,8 +3,7 @@ import { z } from 'zod';
 /**
  * Schema for the extension configuration.
  */
-export const extensionManifestSchema = z.object({
-	/**
+export const extensionManifestSchema: z.ZodTypeAny = z.object({
 	 * Name of the extension package.
 	 */
 	name: z.string(),
