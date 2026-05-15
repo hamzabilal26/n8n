@@ -55,10 +55,10 @@
     "vue-router": "catalog:frontend",
     "vue-tsc": "catalog:frontend",
     "zod-to-json-schema": "catalog:",
-    "tsx": "^4.19.2",
+    "tsx": "^4.19.2"
   },
   "license": "https://docs.n8n.io/sustainable-use-license/",
   "dependencies": {
-    "zod": "^3.x.x"
+    "zod": "^3.23.8"
   }
 }
