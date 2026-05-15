@@ -48,17 +48,17 @@
     "@n8n/typescript-config": "workspace:*",
     "@vitejs/plugin-vue": "catalog:frontend",
     "@vue/tsconfig": "catalog:frontend",
-    "tsdown": "catalog:",
-    "rimraf": "catalog:",
-    "vite": "catalog:",
+"tsdown": "^0.x.x",
+"rimraf": "^5.x.x",
+"vite": "^5.x.x",
     "vue": "catalog:frontend",
     "vue-router": "catalog:frontend",
     "vue-tsc": "catalog:frontend",
     "zod-to-json-schema": "catalog:",
-    "tsx": "catalog:"
+    "tsx": "^4.x.x"
   },
   "license": "https://docs.n8n.io/sustainable-use-license/",
   "dependencies": {
-    "zod": "catalog:"
+    "zod": "^3.x.x"
   }
 }
