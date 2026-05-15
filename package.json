@@ -7,9 +7,7 @@
     "pnpm": ">=10.22.0"
   },
   "packageManager": "pnpm@10.32.1",
-  "devDependencies": {
-  "turbo": "^2.0.0"
-}
+
   "scripts": {
     "prepare": "node scripts/prepare.mjs",
     "preinstall": "node scripts/block-npm-install.js",
@@ -58,6 +56,7 @@
     "stop:computer-use": "lsof -ti :7655 | xargs kill 2>/dev/null; echo 'computer-use stopped'"
   },
   "devDependencies": {
+    "turbo": "^2.0.0",
     "@babel/preset-env": "^7.26.0",
     "@biomejs/biome": "^1.9.0",
     "@dotenvx/dotenvx": "^1.40.0",
@@ -85,7 +84,6 @@
     "ts-jest": "^29.1.1",
     "tsc-alias": "^1.8.10",
     "tsc-watch": "^6.2.0",
-    "turbo": "2.9.4",
     "typescript": "*",
     "zx": "^8.8.5"
   },
